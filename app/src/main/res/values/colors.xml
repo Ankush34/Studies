@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgBackSideColor">#f4f0ff</color>
+    <color name="bgTitleLeft">#594691</color>
+    <color name="bgTitleRight">#ffffff</color>
+    <color name="bgContentTop">#594691</color>
+    <color name="bgContent">#ffffff</color>
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="titleBadgeTitle">#adafb1</color>
+    <color name="titleBadgeText">#adafb1</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="btnRequest">#ffbf12</color>
+    <color name="color_white">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="blue">#303F9F</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="cyan">#00BCD4</color>
+
+    <color name="si_default_text_color">#FF0000</color>
+    <color name="si_default_text_color_selected">#FF00FF</color>
+    <color name="si_default_indicator_bg">#ee9999</color>
+
+    <color name="black">#000000</color>
+
+    <color name="indicator_1">#55B3C2</color>
+    <color name="indicator_2">#64A4A4</color>
+    <color name="indicator_3">#66D7B9</color>
+    <color name="indicator_4">#FDBC7D</color>
+
+</resources>
