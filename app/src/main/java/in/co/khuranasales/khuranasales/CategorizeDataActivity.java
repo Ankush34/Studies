@@ -1,7 +1,6 @@
 package in.co.khuranasales.khuranasales;
 
 import android.animation.Animator;
-import android.app.usage.UsageEvents;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -60,7 +59,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import in.co.khuranasales.khuranasales.notification.Notification;
+import in.co.khuranasales.khuranasales.aboutPage.aboutActivity;
 import in.co.khuranasales.khuranasales.notification.NotificationActivity;
 import in.co.khuranasales.khuranasales.notification.NotificationDatabase;
 
@@ -316,7 +315,9 @@ public class CategorizeDataActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mDrawer.closeDrawers();
-                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), aboutActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -460,7 +461,15 @@ public class CategorizeDataActivity extends AppCompatActivity {
         Mobiles.subCategories.add(create_sub_category("New Launches","Here is the list of all the new launches in India , grab them as soon as u can !! ",R.drawable.new_launches,"View New Launches ->","Mobile"));
         Mobiles.subCategories.add(create_sub_category("Browse By Features","Here is the list of all the features that you can select for a device, customize your features and search only those phones satisfying your choice",R.drawable.brands,"View By Features ->","Mobile"));
         Accessories.subCategories.add(create_sub_category("Accessories","Here u will find the list of the accessories that are available with us,choose the best accessory among the all brands in the list ",R.drawable.best_selling,"View Accessories","Accessories"));
-        Accessories.subCategories.add(create_sub_category("Brands","A sorted list of all the brands that we have with us , choose your brand and get all the acessories related to that brand",R.drawable.accessories,"View By Brands","Accessories"));
+        Accessories.subCategories.add(create_sub_category("Mobile Chargers","Here u will find the list of the mobile chargers that are available with us,choose the best accessory among the all brands in the list ",R.drawable.charger,"View Chargers","Accessories"));
+        Accessories.subCategories.add(create_sub_category("Mobile Earphones","A sorted list of all the  earphones that we have with us , choose your best earphone",R.drawable.earphones,"View Earphones","Accessories"));
+        Accessories.subCategories.add(create_sub_category("Phone Covers","Here u will find the list of the phone covers that are available with us,choose the best accessory among the all brands in the list ",R.drawable.best_selling,"View Accessories","Accessories"));
+        Accessories.subCategories.add(create_sub_category("DataCable","Here u will find the list of the DataCables that are available with us,choose the best accessory among the all brands in the list ",R.drawable.datacable,"View Accessories","Accessories"));
+        Accessories.subCategories.add(create_sub_category("Mobile Bluetooth","A sorted list of all the bluetooth devices that we have with us , choose your accessory",R.drawable.bluetooth,"View Bluetooths","Accessories"));
+
+        Accessories.subCategories.add(create_sub_category("PowerBank","A sorted list of all the PowerBanks that we have with us , choose your best powerbank",R.drawable.powerbank,"View By Brands","Accessories"));
+        Accessories.subCategories.add(create_sub_category("ScreenGuard","A sorted list of all the ScreenGuards that we have with us , choose your acessory wise",R.drawable.screenguard,"View By Brands","Accessories"));
+        Accessories.subCategories.add(create_sub_category("Speakers","A sorted list of all the speakers that we have with us , choose your speaker with the best configurations at minimum price",R.drawable.speakers,"View By Brands","Accessories"));
 
         view_pager_adapter.addFragment(Mobiles, "  Mobiles ");
         view_pager_adapter.addFragment(Accessories, "  Accessories ");

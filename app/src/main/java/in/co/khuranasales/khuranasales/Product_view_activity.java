@@ -41,6 +41,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.crashlytics.android.Crashlytics;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.daimajia.androidanimations.library.fading_exits.FadeOutAnimator;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -111,11 +112,16 @@ public class Product_view_activity extends AppCompatActivity implements recycler
     private ArrayList<String> selected_brands;
     public TextView drawer_name;
     public PromoterListAdapter adapter;
+
+    public static RelativeLayout new_offer_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_main);
+        new_offer_layout = (RelativeLayout)findViewById(R.id.new_offer_layout);
+        new_offer_layout.setVisibility(View.GONE);
+
         appConfig = new AppConfig(getApplicationContext());
         product_selection_text = (TextView) findViewById(R.id.brand_selection_text);
         back_product_name_selection = (ImageView)findViewById(R.id.back_product_name_selection);
@@ -124,19 +130,30 @@ public class Product_view_activity extends AppCompatActivity implements recycler
             selected_brands = this.getIntent().getStringArrayListExtra("selected_brands");
             Log.d("Recieved Brands List: ", "Size: " + selected_brands.size());
         }
-        if (selected_brands.size() != 0) {
-            for (int i = 0; i < selected_brands.size(); i++) {
-                RecyclerViewFragment rvf = new RecyclerViewFragment();
-                rvf.brand = selected_brands.get(i);
-                fragments.add(rvf);
-            }
-        } else{
-            for (int i = 0; i < AppConfig.Brands.size(); i++) {
-                RecyclerViewFragment rvf = new RecyclerViewFragment();
-                rvf.brand = AppConfig.Brands.get(i);
-                fragments.add(rvf);
+        if(!getIntent().hasExtra("Filter"))
+        {
+            if (selected_brands.size() != 0) {
+                for (int i = 0; i < selected_brands.size(); i++) {
+                    RecyclerViewFragment rvf = new RecyclerViewFragment();
+                    rvf.brand = selected_brands.get(i);
+                    fragments.add(rvf);
+                }
+            } else{
+                for (int i = 0; i < AppConfig.Brands.size(); i++) {
+                    RecyclerViewFragment rvf = new RecyclerViewFragment();
+                    rvf.brand = AppConfig.Brands.get(i);
+                    fragments.add(rvf);
+                }
             }
         }
+        else
+        {
+            RecyclerViewFragment rvf = new RecyclerViewFragment();
+            rvf.filter = "Favorites";
+            rvf.brand = "Favorites";
+            fragments.add(rvf);
+        }
+
         brand_products_list_names = (RecyclerView)findViewById(R.id.brand_products_list);
         brand_products_list_names.setHasFixedSize(true);
         brand_products_list_names.setLayoutManager(new LinearLayoutManagerWithSmoothScroller(getApplicationContext()));
@@ -503,14 +520,25 @@ public class Product_view_activity extends AppCompatActivity implements recycler
 
             @Override
             public int getCount() {
-                if (selected_brands.size() != 0) {
-                    return selected_brands.size();
+                if(getIntent().hasExtra("Filter"))
+                {
+                    return 1;
                 }
-                return AppConfig.Brands.size();
+                else
+                {
+                    if (selected_brands.size() != 0) {
+                        return selected_brands.size();
+                    }
+                    return AppConfig.Brands.size();
+                }
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
+                if(getIntent().hasExtra("Filter"))
+                {
+                    return  getIntent().getStringExtra("Filter");
+                }
                 if (selected_brands.size() != 0) {
                     return selected_brands.get(position);
                 }
@@ -531,11 +559,19 @@ public class Product_view_activity extends AppCompatActivity implements recycler
         mViewPager.getViewPager().addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if(selected_brands.size() == 0) {
-                    search_text.setHint("Search " + AppConfig.Brands.get(position) + " Phones ...");
-                    product_selection_text.setText(AppConfig.Brands.get(position));
-                }else{search_text.setHint("Search "+selected_brands.get(position)+" Phones ...");
-                    product_selection_text.setText(selected_brands.get(position));
+                if(getIntent().hasExtra("Filter"))
+                {
+                    search_text.setHint("Search Your Favorites");
+                    product_selection_text.setText(getIntent().getStringExtra("Filter"));
+                }
+                else
+                {
+                    if(selected_brands.size() == 0) {
+                        search_text.setHint("Search " + AppConfig.Brands.get(position) + " Phones ...");
+                        product_selection_text.setText(AppConfig.Brands.get(position));
+                    }else{search_text.setHint("Search "+selected_brands.get(position)+" Phones ...");
+                        product_selection_text.setText(selected_brands.get(position));
+                    }
                 }
                 if(search_layout_visible == true)
                 {
@@ -646,16 +682,6 @@ public class Product_view_activity extends AppCompatActivity implements recycler
           filtered = Product.filtered_products(currentArrayList, sequence);
         adapter.productListElements = filtered;
         adapter.notifyDataSetChanged();
-//        fragments.get(page_selected).mContentItems.clear();
-//        fragments.get(page_selected).mContentItems.addAll(filtered);
-//        fragments.get(page_selected).mAdapter.notifyDataSetChanged();
-
-//        fragments.get(page_selected).smoothScroller.setTargetPosition(0);
-//        mViewPager.animator = MaterialViewPagerHelper.getAnimator(this);
-//        mViewPager.animator.restoreScroll(-1,new MaterialViewPagerSettings());
-//        mViewPager.animator.yOffsets.put(fragments.get(page_selected).mRecyclerView,0);
-//        mViewPager.animator.lastYOffset = 0;
-//        fragments.get(page_selected).layoutManager.startSmoothScroll(fragments.get(page_selected).smoothScroller);
     }
 
     @Override

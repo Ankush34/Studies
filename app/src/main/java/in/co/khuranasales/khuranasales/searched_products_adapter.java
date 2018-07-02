@@ -9,18 +9,24 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class searched_products_adapter extends RecyclerView.Adapter<searched_products_adapter.ViewHolder> {
     private String[] dataSource;
@@ -28,9 +34,11 @@ public class searched_products_adapter extends RecyclerView.Adapter<searched_pro
     private Activity activity;
     public User user_used;
     private List<Product> products;
+    private AppConfig appConfig;
     public searched_products_adapter(Activity activity, List<Product> products) {
         this.activity = activity;
         this.products = products;
+        appConfig = new AppConfig(activity.getApplicationContext());
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -65,6 +73,73 @@ public class searched_products_adapter extends RecyclerView.Adapter<searched_pro
 
             }
         });
+        if(appConfig.getUserType().equals("Admin"))
+        {
+            if(product.get_update_status())
+            {
+                Log.d("Loop: ","In If lloop");
+                holder.imageView.setVisibility(View.INVISIBLE);
+                holder.imageView1.setVisibility(View.VISIBLE);
+                holder.text1.setVisibility(View.VISIBLE);
+                holder.text2.setVisibility(View.VISIBLE);
+                holder.text3.setVisibility(View.VISIBLE);
+                holder.text1.setText(""+product.getPrice_mrp());
+                holder.text2.setText(""+product.getPrice_mop());
+                holder.text3.setText(""+product.getPrice_ks());
+            }
+            else
+            {
+                Log.d("Loop","In Else Loop");
+                holder.imageView.setVisibility(View.VISIBLE);
+                holder.imageView1.setVisibility(View.INVISIBLE);
+                holder.text1.setVisibility(View.INVISIBLE);
+                holder.text2.setVisibility(View.INVISIBLE);
+                holder.text3.setVisibility(View.INVISIBLE);
+            }
+
+        }
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("clicked: ","I am clicked Pewncil");
+                holder.imageView.setVisibility(View.INVISIBLE);
+                holder.imageView1.setVisibility(View.VISIBLE);
+                holder.text1.setVisibility(View.VISIBLE);
+                holder.text2.setVisibility(View.VISIBLE);
+                holder.text3.setVisibility(View.VISIBLE);
+                product.set_update_status(true);
+            }
+        });
+        holder.imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product.set_update_status(false);
+                Log.d("clicked: ","I am clicked Tick");
+                holder.imageView1.setVisibility(View.INVISIBLE);
+                holder.imageView.setVisibility(View.VISIBLE);
+                holder.text1.setVisibility(View.INVISIBLE);
+                holder.text2.setVisibility(View.INVISIBLE);
+                holder.text3.setVisibility(View.INVISIBLE);
+                int mrp=product.getPrice_mrp();
+                if(!(holder.text1.getText().toString().equals(null)||holder.text1.getText().toString().equals("")))
+                {
+                    mrp = Integer.parseInt(holder.text1.getText().toString());
+                }
+                int mop=product.getPrice_mop();
+                if(!(holder.text2.getText().toString().equals(null)||holder.text2.getText().toString().equals("")))
+                {
+                    mop= Integer.parseInt(holder.text2.getText().toString());
+                }
+                int ksprice=product.getPrice_ks();
+                if(!(holder.text3.getText().toString().equals(null)||holder.text3.getText().toString().equals("")))
+                {
+                    ksprice= Integer.parseInt(holder.text3.getText().toString());
+                }
+                send_data(mrp,mop,ksprice,product.get_Name(),holder,position);
+                notifyItemChanged(position);
+            }
+        });
+
     }
 
     @Override
@@ -78,6 +153,11 @@ public class searched_products_adapter extends RecyclerView.Adapter<searched_pro
         TextView mop_price;
         TextView ks_price;
         TextView stock;
+        ImageView imageView;
+        ImageView imageView1;
+        EditText text1;
+        EditText text2;
+        EditText text3;
         public ViewHolder(final View itemView) {
             super(itemView);
         name = (TextView)itemView.findViewById(R.id.mobile_name);
@@ -85,7 +165,54 @@ public class searched_products_adapter extends RecyclerView.Adapter<searched_pro
         mop_price = (TextView)itemView.findViewById(R.id.mop_price);
         ks_price = (TextView)itemView.findViewById(R.id.ks_price);
         stock = (TextView)itemView.findViewById(R.id.stock);
+            imageView=(ImageView)itemView.findViewById(R.id.pencil);
+            text1=(EditText)itemView.findViewById(R.id.edit_mrp);
+            text2=(EditText)itemView.findViewById(R.id.edit_mop);
+            text3=(EditText)itemView.findViewById(R.id.edit_ksprice);
+            imageView1=(ImageView)itemView.findViewById(R.id.done);
+
         }
 
     }
+
+    public void send_data(final int mrp, final int mop, final int ksprice, final String name, final searched_products_adapter.ViewHolder holder, int position)
+    {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.url_price_update,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("response:","successfull");
+                        holder.text1.setText(""+mrp);
+                        holder.text2.setText(""+mop);
+                        holder.text3.setText(""+ksprice);
+                        products.get(position).setPrice_ks(ksprice);
+                        products.get(position).setPrice_mop(mop);
+                        products.get(position).setPrice_mrp(mrp);
+                        notifyItemChanged(position);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("name",""+name);
+                params.put("mrp",""+mrp);
+                params.put("mop",""+mop);
+                params.put("ksprice",""+ksprice);
+                return params;
+            }
+        };
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                DefaultRetryPolicy.DEFAULT_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        AppController.getInstance().addToRequestQueue(stringRequest);
+    }
+
 }

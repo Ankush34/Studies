@@ -36,6 +36,7 @@ public class RecyclerViewFragment extends Fragment {
     public RecyclerView.SmoothScroller smoothScroller;
     public RecyclerView.LayoutManager layoutManager;
     public String brand;
+    public String filter = new String("");
     public AppConfig appConfig ;
     public ImageView view1;
 
@@ -65,7 +66,7 @@ public class RecyclerViewFragment extends Fragment {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
 
-        mAdapter = new RecyclerViewMaterialAdapter(new TestRecyclerViewAdapter(mContentItems));
+        mAdapter = new RecyclerViewMaterialAdapter(new TestRecyclerViewAdapter(mContentItems,view.getContext()));
         mRecyclerView.setAdapter(mAdapter);
 
         MaterialViewPagerHelper.registerRecyclerView(getActivity(), mRecyclerView, null);
@@ -80,13 +81,32 @@ public class RecyclerViewFragment extends Fragment {
         }
         @Override
         protected Void doInBackground(Void... params)  {
-            Log.d("brand",brand);
-            Log.d("url",AppConfig.url_product_view+brand+"&type="+CategorizeDataActivity.type);
-            JsonArrayRequest movieReq = new JsonArrayRequest(AppConfig.url_product_view+brand+"&type="+CategorizeDataActivity.type,
-                    new Response.Listener<JSONArray>() {
+           String url = "";
+            if(brand.equals("Favorites"))
+           {
+               url = AppConfig.get_favorites+appConfig.getUser_email();
+           }else
+           {
+              url =  AppConfig.url_product_view+brand+"&type="+CategorizeDataActivity.type;
+           }
+            Log.d("url",url);
+
+            JsonArrayRequest movieReq = new JsonArrayRequest(url,new Response.Listener<JSONArray>() {
                         @Override
                         public void onResponse(JSONArray response) {
                             Log.d("True Response", response.toString());
+                            JSONArray response_new =new JSONArray();
+                            Log.d("ProductViewActivity",response.toString());
+                            if(brand.equals("Favorites"))
+                            {
+                                try {
+                                    JSONObject object = response.getJSONObject(0);
+                                   response_new  =  object.getJSONArray("product_info");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                response = response_new;
+                            }
                             for (int i = 0; i < response.length(); i++) {
                                 try {
                                     JSONObject obj = response.getJSONObject(i);
@@ -111,6 +131,14 @@ public class RecyclerViewFragment extends Fragment {
                                         pro.setPrice_ks(Integer.parseInt(obj.getString("ksprice")));
                                     }
                                     pro.set_link(obj.getString("link"));
+                                    if(brand.equals("Favorites"))
+                                    {
+                                        pro.setFavorite_status(true);
+                                    }
+                                    else
+                                    {
+                                        pro.setFavorite_status(false);
+                                    }
                                     if(appConfig.getUserType().equals("Admin"))
                                     {
                                         mContentItems.add(pro);

@@ -1,25 +1,39 @@
 package in.co.khuranasales.khuranasales;
 
+import android.animation.Animator;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.daimajia.androidanimations.library.fading_entrances.FadeInAnimator;
+import com.daimajia.androidanimations.library.fading_exits.FadeOutAnimator;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import io.fabric.sdk.android.services.concurrency.AsyncTask;
 
 /**
  * Created by florentchampigny on 24/04/15.
@@ -29,9 +43,15 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     public List<Product> contents;
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
+    public AppConfig appConfig;
+    public Context context;
 
-    public TestRecyclerViewAdapter(List<Product> contents) {
+
+    public TestRecyclerViewAdapter(List<Product> contents, Context context) {
         this.contents = contents;
+        appConfig = new AppConfig(context);
+        this.context = context;
+
     }
 
     @Override
@@ -52,7 +72,6 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = null;
-
         switch (viewType) {
             case TYPE_HEADER: {
                 view = LayoutInflater.from(parent.getContext())
@@ -69,6 +88,8 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
         return null;
     }
+
+
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         switch (getItemViewType(position)) {
@@ -78,13 +99,85 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 break;
             case TYPE_CELL:
                final ViewHolder1 holder1 =(ViewHolder1) holder;
-
-                final Product p=contents.get(position-1);
+                Product p = contents.get(position-1);
                 Log.d("UserType",""+( holder1.appConfig.getUserType()));
                 if(!holder1.appConfig.getUserType().equals("Admin"))
                 {
                     holder1.imageView.setVisibility(View.INVISIBLE);
+                    holder1.add_to_offer.setVisibility(View.GONE);
                 }
+
+                holder1.add_to_offer.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fade_in(Product_view_activity.new_offer_layout);
+                        TextView name = Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_name);
+                        name.setText(p.get_Name());
+                        TextView product_id = Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_id);
+                        product_id.setText(""+p.getProduct_id());
+                        TextView mrp = Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_price);
+                        mrp.setText(""+p.getPrice_mrp());
+                        TextView ksprice = Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_lowest_price);
+                        ksprice.setText(""+p.getPrice_ks());
+                        EditText title = (EditText) Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_title);
+                        EditText description = (EditText) Product_view_activity.new_offer_layout.findViewById(R.id.write_offer_product_description);
+                        Button upload_offer = (Button)Product_view_activity.new_offer_layout.findViewById(R.id.upload_offer);
+                        ImageView back_write_offer = (ImageView)Product_view_activity.new_offer_layout.findViewById(R.id.back_write_offer);
+                        back_write_offer.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                fade_out(Product_view_activity.new_offer_layout);
+                            }
+                        });
+                        upload_offer.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                String data[]  =new String[3];
+                                data[0] = ""+p.getProduct_id();
+                                data[1] = title.getText().toString();
+                                data[2] = description.getText().toString();
+                               new add_to_offers().execute(data);
+                               fade_out(Product_view_activity.new_offer_layout);
+                            }
+                        });
+                    }
+                });
+
+                if(p.isFavorite())
+                {
+                    Log.d("ProductViewActivity","IAMHERE1");
+                    holder1.like.setVisibility(View.VISIBLE);
+                    holder1.unlike.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+
+                    Log.d("ProductViewActivity","IAMHERE2");
+                    holder1.unlike.setVisibility(View.VISIBLE);
+                    holder1.like.setVisibility(View.INVISIBLE);
+                }
+
+                holder1.unlike.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new add_to_favorites().execute(p);
+                        contents.get(position-1).setFavorite_status(true);
+                        notifyItemChanged(position-1);
+                        holder1.like.setVisibility(View.VISIBLE);
+                        holder1.unlike.setVisibility(View.INVISIBLE);
+
+                    }
+                });
+                holder1.like.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new remove_from_favorites().execute(p);
+                        contents.get(position-1).setFavorite_status(false);
+                        notifyItemChanged(position-1);
+                        holder1.unlike.setVisibility(View.VISIBLE);
+                        holder1.like.setVisibility(View.INVISIBLE);
+                    }
+                });
                 holder1.textView.setText(p.get_Name());
                 holder1.view1.setText(""+p.getPrice_mrp());
                 holder1.view2.setText(""+p.getPrice_mop());
@@ -120,7 +213,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                         holder1.text1.setText(""+p.getPrice_mrp());
                         holder1.text2.setText(""+p.getPrice_mop());
                         holder1.text3.setText(""+p.getPrice_ks());
-}
+                    }
                     else
                     {
                         Log.d("Loop","In Else Loop");
@@ -154,17 +247,17 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                         holder1.text1.setVisibility(View.INVISIBLE);
                         holder1.text2.setVisibility(View.INVISIBLE);
                         holder1.text3.setVisibility(View.INVISIBLE);
-                        int mrp=0;
+                        int mrp=p.getPrice_mrp();
                         if(!(holder1.text1.getText().toString().equals(null)||holder1.text1.getText().toString().equals("")))
                         {
                             mrp = Integer.parseInt(holder1.text1.getText().toString());
                         }
-                        int mop=0;
+                        int mop=p.getPrice_mop();
                         if(!(holder1.text2.getText().toString().equals(null)||holder1.text2.getText().toString().equals("")))
                         {
                             mop= Integer.parseInt(holder1.text2.getText().toString());
                         }
-                        int ksprice=0;
+                        int ksprice=p.getPrice_ks();
                         if(!(holder1.text3.getText().toString().equals(null)||holder1.text3.getText().toString().equals("")))
                         {
                             ksprice= Integer.parseInt(holder1.text3.getText().toString());
@@ -201,6 +294,11 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         public EditText text1;
         public EditText text2;
         public EditText text3;
+        public ImageView like;
+        public ImageView unlike;
+        public TextView add_to_offer;
+
+
         public ViewHolder1(final View itemView) {
             super(itemView);
         }
@@ -216,7 +314,10 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             view2=(TextView)itemView.findViewById(R.id.mop_price);
             view3=(TextView)itemView.findViewById(R.id.ks_price);
             textView2=(TextView)itemView.findViewById(R.id.stock);
-        appConfig = new AppConfig(itemView.getContext());
+            like = (ImageView)itemView.findViewById(R.id.like_star);
+            appConfig = new AppConfig(itemView.getContext());
+            unlike = (ImageView)itemView.findViewById(R.id.unlike_star);
+            add_to_offer = (TextView)itemView.findViewById(R.id.add_to_offers);
         }
 
     }
@@ -261,4 +362,142 @@ public void send_data(final int mrp, final int mop, final int ksprice, final Str
     AppController.getInstance().addToRequestQueue(stringRequest);
 }
 
+public class add_to_favorites extends AsyncTask<Product, Void, Void>
+{
+
+    @Override
+    protected Void doInBackground(Product... products) {
+        JsonArrayRequest add_to_favorites_request = new JsonArrayRequest(AppConfig.add_to_favorites+products[0].getProduct_id()+"&email="+appConfig.getUser_email(), new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response)
+            {
+                try {
+                    JSONObject first_ibject = response.getJSONObject(0);
+                    if(first_ibject.getString("status").equals("success"))
+                    {
+                        Toast.makeText(context,"Successfully added to your favorites",Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(context,"Could not add to your favorites please retry !!",Toast.LENGTH_SHORT).show();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context,"Please Retry !!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        AppController.getInstance().addToRequestQueue(add_to_favorites_request);
+        return null;
+    }
+}
+
+    public class remove_from_favorites extends AsyncTask<Product, Void, Void>
+    {
+
+        @Override
+        protected Void doInBackground(Product... products) {
+            JsonArrayRequest remove_from_favorites_request = new JsonArrayRequest(AppConfig.remove_from_favorites+products[0].getProduct_id()+"&email="+appConfig.getUser_email(), new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response)
+                {
+                    try {
+                        JSONObject first_object = response.getJSONObject(0);
+                        if(first_object.getString("status").equals("success"))
+                        {
+                            Toast.makeText(context,"Successfully removed from favorites",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(context,"Could not remove from your favorites please retry !!",Toast.LENGTH_SHORT).show();
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(context,"Please Retry !!",Toast.LENGTH_SHORT).show();
+                }
+            });
+            AppController.getInstance().addToRequestQueue(remove_from_favorites_request);
+            return null;
+        }
+    }
+
+    class add_to_offers extends AsyncTask<String, Void, Void>
+    {
+
+        @Override
+        protected Void doInBackground(String... data) {
+            HashMap<String,String> params = new HashMap<String,String>();
+            params.put("product_id",data[0]);
+            params.put("title",data[1]);
+            params.put("description",data[2]);
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,AppConfig.add_offer,new JSONObject(params), new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                   Log.d("ProductViewActivity: ",""+response.toString());
+                    try {
+                       if(response.getString("status").equals("success"))
+                       {
+                           Toast.makeText(context.getApplicationContext(),"Successfully uploaded offer",Toast.LENGTH_LONG).show();
+                       }
+                       else
+                       {
+                           Toast.makeText(context.getApplicationContext(),"Please Retry !! ",Toast.LENGTH_LONG).show();
+
+                       }
+                   }catch (Exception e)
+                   {
+                       e.printStackTrace();
+                   }
+                                   }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.d("VolleyError",""+error.getMessage());
+                    Toast.makeText(context.getApplicationContext(),"Error Took Place , Please Check Your Network Connection",Toast.LENGTH_SHORT).show();
+                }
+            });
+            AppController.getInstance().addToRequestQueue(request);
+            return null;
+        }
+    }
+
+    public void fade_out(View v)
+    {
+        FadeOutAnimator fadeout = new FadeOutAnimator();
+        fadeout.prepare(v);
+        fadeout.setTarget(v);
+        fadeout.setDuration(400);
+        fadeout.addAnimatorListener(new Animator.AnimatorListener() {
+            @Override public void onAnimationStart(Animator animation) { }
+            @Override public void onAnimationEnd(Animator animation) { v.setVisibility(View.GONE);}
+            @Override public void onAnimationCancel(Animator animation) { }
+            @Override public void onAnimationRepeat(Animator animation) { }
+        });
+        fadeout.start();
+    }
+    public void fade_in(View v)
+    {
+        FadeInAnimator fadein = new FadeInAnimator();
+        fadein.prepare(v);
+        fadein.setTarget(v);
+        fadein.setDuration(400);
+        fadein.addAnimatorListener(new Animator.AnimatorListener() {
+            @Override public void onAnimationStart(Animator animation) {v.setVisibility(View.VISIBLE);}
+            @Override public void onAnimationEnd(Animator animation) {}
+            @Override public void onAnimationCancel(Animator animation) { }
+            @Override public void onAnimationRepeat(Animator animation) { }
+        });
+        fadein.start();
+    }
 }

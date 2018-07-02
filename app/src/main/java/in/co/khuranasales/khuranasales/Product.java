@@ -38,10 +38,31 @@ public class Product implements Parcelable
     private String order_status;
     private String invoice_status;
     private String customer_name;
+    private Boolean favorite_status;
     private String customer_contact;
     public ArrayList<Batch> selected_batch_numbers = new ArrayList<>();
     public ArrayList<Batch> batch_numbers =new ArrayList<>();
     public String Product_HSN;
+    public int sold_count;
+
+
+
+    public int getSold_count() {
+        return sold_count;
+    }
+
+    public void setSold_count(int sold_count) {
+        this.sold_count = sold_count;
+    }
+
+    public Boolean isFavorite() {
+
+        return this.favorite_status;
+    }
+
+    public void setFavorite_status(Boolean favorite_status) {
+        this.favorite_status = favorite_status;
+    }
 
     public ArrayList<Batch> getSelected_batch_numbers() {
         return selected_batch_numbers;

@@ -84,5 +84,17 @@
         <activity android:name=".notification.NotificationActivity"
             android:theme="@style/AppTheme2">
         </activity>
+        <activity android:name=".Offers.OffersActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".BestSelling.bestSellingActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".NewLaunches.newLaunchesActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".aboutPage.aboutActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
     </application>
 </manifest>

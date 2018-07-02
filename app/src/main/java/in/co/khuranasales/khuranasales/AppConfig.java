@@ -131,7 +131,14 @@ public class AppConfig {
     public static String load_single_product_by_id = "http://khuranasales.co.in/work/fetch_single_product.php?product_id=";
     public static String check_availability_order = "http://khuranasales.co.in/work/check_products_availability.php?email=";
     public static String get_invoice_data_reinvoice = "http://khuranasales.co.in/work/get_products_reinvoice.php?sales_order_invoice_number=";
-
+    public static String add_to_favorites = "http://khuranasales.co.in/work/add_to_favorites.php?product_id=";
+    public static String remove_from_favorites = "http://khuranasales.co.in/work/remove_from_favorites.php?product_id=";
+    public static String get_favorites = "http://khuranasales.co.in/work/get_favorites.php?email=";
+    public static String get_offers = "http://khuranasales.co.in/work/get_offers.php";
+    public static String add_offer = "http://khuranasales.co.in/work/add_offer.php";
+    public static String delete_offer = "http://khuranasales.co.in/work/delete_offer.php?product_id=";
+    public static String get_best_sellings = "http://khuranasales.co.in/work/get_best_selling.php";
+    public static String get_new_launches = "http://khuranasales.co.in/work/get_new_launches.php";
     public static ArrayList<String> Brands = new ArrayList<String>();
 
 }

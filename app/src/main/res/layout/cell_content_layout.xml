@@ -62,8 +62,7 @@
             android:id="@+id/head_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/head_image" />
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/head_image_left_text"
@@ -224,7 +223,7 @@
                 android:layout_alignParentRight="true"
                 android:textColor="@color/color_white"
                 android:gravity="center"
-                android:textSize="12dp"
+                android:textSize="10dp"
                 android:text="Re-Issue Invoice"/>
         </RelativeLayout>
 

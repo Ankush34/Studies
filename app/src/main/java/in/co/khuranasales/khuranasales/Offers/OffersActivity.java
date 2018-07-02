@@ -1,0 +1,338 @@
+package in.co.khuranasales.khuranasales.Offers;
+
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+import in.co.khuranasales.khuranasales.Activity_Login;
+import in.co.khuranasales.khuranasales.AppConfig;
+import in.co.khuranasales.khuranasales.AppController;
+import in.co.khuranasales.khuranasales.Buy_Now_Activity;
+import in.co.khuranasales.khuranasales.Final_Cart;
+import in.co.khuranasales.khuranasales.LinearLayoutManagerWithSmoothScroller;
+import in.co.khuranasales.khuranasales.MainActivity;
+import in.co.khuranasales.khuranasales.NotificationUserList;
+import in.co.khuranasales.khuranasales.R;
+import in.co.khuranasales.khuranasales.SoldItemPromotersActivity;
+import in.co.khuranasales.khuranasales.notification.NotificationActivity;
+
+public class OffersActivity extends AppCompatActivity {
+    public DrawerLayout mDrawer;
+    public ActionBarDrawerToggle mDrawerToggle;
+    public Toolbar toolbar;
+    public ArrayList<Offer> offers ;
+    public RecyclerView offers_recycler ;
+    public OffersAdapter adapter_offers ;
+    private TextView textView1;
+    private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
+    private TextView textView5;
+    private TextView textView6;
+    private TextView textView7;
+    private TextView textView8;
+    private TextView textView9;
+    private TextView textView10;
+    private TextView textView11;
+    private TextView textView12;
+    private TextView textView13;
+    private  AppConfig appConfig;
+    private TextView textView14;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.offers_activity);
+        appConfig = new AppConfig(getApplicationContext());
+        offers = new ArrayList<>();
+        offers_recycler = (RecyclerView)findViewById(R.id.recycler_offers);
+        LinearLayoutManagerWithSmoothScroller manager = new LinearLayoutManagerWithSmoothScroller(getApplicationContext());
+        offers_recycler.setLayoutManager(manager);
+        adapter_offers = new OffersAdapter(offers,this);
+        offers_recycler.setAdapter(adapter_offers);
+        offers_recycler.setHasFixedSize(true);
+        adapter_offers.notifyDataSetChanged();
+        new load_offers().execute();
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            final ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setTitle("Khurana Sales");
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowHomeEnabled(true);
+                actionBar.setDisplayShowTitleEnabled(true);
+                actionBar.setDisplayUseLogoEnabled(false);
+                actionBar.setHomeButtonEnabled(true);
+            }
+        }
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_open, R.string.drawer_close);
+        mDrawer.addDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
+        set_drawer_listeners();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main_my_cart,menu);
+        final View action_profile = menu.findItem(R.id.action_profile).getActionView();
+        action_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(appConfig.isLogin())
+                {
+                    Intent intent = new Intent(OffersActivity.this,Final_Cart.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(OffersActivity.this,"Please login to proceed",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        final View action_cart= menu.findItem(R.id.action_cart).getActionView();
+        action_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OffersActivity.this,Buy_Now_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        return true;
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    class load_offers extends AsyncTask<Void,Void,Void>
+    {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            JsonArrayRequest request = new JsonArrayRequest(AppConfig.get_offers, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+                    JSONObject object = null;
+                    try {
+                        object = response.getJSONObject(0);
+                        if(object.getString("status").equals("Success"))
+                        {
+                            JSONArray response_array  = object.getJSONArray("product_info");
+                            for(int i = 0; i < response_array.length();i++)
+                            {
+                                try {
+                                    JSONObject product = response_array.getJSONObject(i);
+                                    Offer offer = new Offer();
+                                    offer.setOffr_producT_id(product.getString("product_id"));
+                                    offer.setOffer_title(product.getString("offer_title"));
+                                    offer.setOffer_descripiton(product.getString("offer_description"));
+                                    offer.setOffer_product_name(product.getString("Name"));
+                                    offer.setOffer_product_price(product.getString("mrp"));
+                                    offer.setOffer_product_discounted_price(product.getString("ksprice"));
+                                    offer.setOffer_product_mop_price(product.getString("mop"));
+                                    offer.setOffer_product_image_links(product.getString("link"));
+                                    offer.setOffer_product_instock_quantity(product.getString("stock"));
+                                    offers.add(offer);
+                                    adapter_offers.notifyDataSetChanged();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(),"Sorry No Offers!",Toast.LENGTH_LONG).show();
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(),"Could Not Load Offers Please Retry !",Toast.LENGTH_SHORT).show();
+                }
+            });
+            AppController.getInstance().addToRequestQueue(request);
+            return null;
+        }
+    }
+
+    public void set_drawer_listeners()
+    {
+        textView1 = (TextView) findViewById(R.id.login);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (appConfig.isLogin()) {
+                    mDrawer.closeDrawers();
+                    Toast.makeText(getApplicationContext(), "Already Logged In As " + appConfig.getUser_name(), Toast.LENGTH_LONG).show();
+                } else {
+                    mDrawer.closeDrawers();
+                    Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+                    startActivity(intent);
+
+                }
+            }
+        });
+        textView2 = (TextView) findViewById(R.id.signup);
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        textView3 = (TextView) findViewById(R.id.cart);
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (appConfig.isLogin()) {
+                    mDrawer.closeDrawers();
+                    Intent intent = new Intent(getApplicationContext(), Buy_Now_Activity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please Login Before Proceedig ...", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        textView4 = (TextView) findViewById(R.id.acc);
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (appConfig.isLogin()) {
+                    mDrawer.closeDrawers();
+                    Intent intent = new Intent(getApplicationContext(), Final_Cart.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please Login Before Proceedig ...", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        textView5 = (TextView) findViewById(R.id.setPasscode);
+        textView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        textView6 = (TextView) findViewById(R.id.forgotKey);
+        textView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        textView7 = (TextView) findViewById(R.id.help);
+        textView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        textView8 = (TextView) findViewById(R.id.share);
+        textView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        textView9 = (TextView) findViewById(R.id.contact);
+        textView9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        textView10 = (TextView) findViewById(R.id.about);
+        textView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Toast.makeText(getApplicationContext(), "Soon.....", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        textView11 = (TextView) findViewById(R.id.logout);
+        textView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                appConfig.setStatus_login(false);
+                Toast.makeText(getApplicationContext(), "Logged Out " + appConfig.getUser_name(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+                startActivity(intent);
+            }
+        });
+        textView12 = (TextView) findViewById(R.id.notify);
+        textView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Intent intent = new Intent(getApplicationContext(), NotificationUserList.class);
+                startActivity(intent);
+            }
+        });
+        textView13 = (TextView) findViewById(R.id.promoters);
+        textView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Intent intent = new Intent(getApplicationContext(), SoldItemPromotersActivity.class);
+                startActivity(intent);
+            }
+        });
+        textView14 = (TextView) findViewById(R.id.notification);
+        textView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawer.closeDrawers();
+                Intent intent = new Intent(getApplicationContext(), NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}

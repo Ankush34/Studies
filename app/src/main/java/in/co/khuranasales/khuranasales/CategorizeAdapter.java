@@ -1,6 +1,7 @@
 package in.co.khuranasales.khuranasales;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
@@ -18,6 +19,10 @@ import com.daimajia.androidanimations.library.fading_entrances.FadeInAnimator;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import in.co.khuranasales.khuranasales.BestSelling.bestSellingActivity;
+import in.co.khuranasales.khuranasales.NewLaunches.newLaunchesActivity;
+import in.co.khuranasales.khuranasales.Offers.OffersActivity;
 
 /**
  * Created by Ankush Khurana on 28/07/2017.
@@ -99,11 +104,7 @@ public class CategorizeAdapter extends RecyclerView.Adapter<CategorizeAdapter.Vi
                                 public void onAnimationRepeat(Animator animator) {}});
                             fadeInAnimator.start();
                         }
-                        else
-                        {
-                            Toast.makeText(itemView.getContext(),"Coming Soon....",Toast.LENGTH_LONG).show();
-                        }
-                    }
+                       }
                     if(sub_categories.get(position).fragment_name.equals("Accessories"))
                     {
                         if(sub_categories.get(position).name.equals("Accessories"))
@@ -125,11 +126,39 @@ public class CategorizeAdapter extends RecyclerView.Adapter<CategorizeAdapter.Vi
                                 public void onAnimationRepeat(Animator animator) {}});
                             fadeInAnimator.start();
                         }
-                        else
-                        {
-                            Toast.makeText(itemView.getContext(),"Coming Soon....",Toast.LENGTH_LONG).show();
-                        }
+
                     }
+                    if(sub_categories.get(position).name.equals("Favorites"))
+                    {
+                        Intent intent = new Intent(activity.getApplicationContext(),Product_view_activity.class);
+                        intent.putExtra("Filter","Favorites");
+                        activity.overridePendingTransition(0,R.anim.slide_out_left_animation);
+                        activity.startActivity(intent);
+
+                    }
+                    if(sub_categories.get(position).name.equals("Offers"))
+                    {
+                        Intent intent = new Intent(activity.getApplicationContext(),OffersActivity.class);
+                        activity.overridePendingTransition(0,R.anim.slide_out_left_animation);
+                        activity.startActivity(intent);
+                    }
+                    if(sub_categories.get(position).name.equals("Best Selling"))
+                    {
+                        Intent intent = new Intent(activity.getApplicationContext(),bestSellingActivity.class);
+                        activity.overridePendingTransition(0,R.anim.slide_out_left_animation);
+                        activity.startActivity(intent);
+                    }
+                    if(sub_categories.get(position).name.equals("New Launches"))
+                    {
+                        Intent intent = new Intent(activity.getApplicationContext(),newLaunchesActivity.class);
+                        activity.overridePendingTransition(0,R.anim.slide_out_left_animation);
+                        activity.startActivity(intent);
+                    }
+                    if(sub_categories.get(position).name.equals("Buy More Save More")||sub_categories.get(position).name.equals("Browse By Features") )
+                    {
+                        Toast.makeText(itemView.getContext(),"Coming Soon....",Toast.LENGTH_LONG).show();
+                    }
+
                 }
             });
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relative_layout_card_categorize);
