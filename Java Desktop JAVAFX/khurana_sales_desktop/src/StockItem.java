@@ -12,10 +12,13 @@ public class StockItem {
 	public String Batch_numbers;
 	public String Product_HSN;
 	
-	public StockItem(String name, String brand)
+	public StockItem(String name, String stock, String mrp, String mop, String ksprice)
 	{
 		this.Name = name;
-		this.Brand = brand;
+		this.Stock = stock;
+		this.Price_MRP = mrp;
+		this.Price_MOP = mop;
+		this.Price_KS = ksprice;
 		
 	}
 	
