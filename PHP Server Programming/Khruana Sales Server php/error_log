@@ -1,0 +1,126 @@
+[30-Jun-2018 17:59:56 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:18:41 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:19:08 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:21:22 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:22:29 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:22:49 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:32:24 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:35:25 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:36:35 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:44:54 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:48:03 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:48:29 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:52:46 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:54:05 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:57:19 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 18:57:35 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 19:19:59 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 19:25:06 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:04:09 UTC] PHP Notice:  Undefined index: product_id in /home/m6fb8grc78rd/public_html/work/add_offer.php on line 4
+[30-Jun-2018 20:04:09 UTC] PHP Notice:  Undefined index: title in /home/m6fb8grc78rd/public_html/work/add_offer.php on line 5
+[30-Jun-2018 20:04:09 UTC] PHP Notice:  Undefined index: description in /home/m6fb8grc78rd/public_html/work/add_offer.php on line 6
+[30-Jun-2018 20:04:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/m6fb8grc78rd/public_html/work/add_offer.php on line 10
+[30-Jun-2018 20:15:04 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:15:43 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:16:32 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:17:33 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:24:16 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:35:18 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:35:27 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:35:32 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:36:23 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:37:47 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:38:41 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:39:29 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[30-Jun-2018 20:40:46 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:08:16 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:14:22 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:19:46 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:23:22 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:28:14 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 05:31:37 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 06:05:08 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 06:11:54 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 06:38:34 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, array given in /home/m6fb8grc78rd/public_html/work/get_best_selling.php on line 32
+[01-Jul-2018 06:55:18 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 07:02:18 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 07:02:46 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 07:06:41 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:06:08 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:06:37 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:07:17 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:09:04 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:51:30 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:52:06 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:52:09 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:54:34 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:54:49 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:55:26 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:57:29 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 11:58:17 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 12:04:25 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 12:12:20 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 12:12:20 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 12:13:44 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 12:30:24 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 12:30:27 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 12:30:44 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 13:09:05 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 13:09:12 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 13:09:45 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 13:41:18 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 15:21:38 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:21:38 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:28:25 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 15:32:44 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 15:34:23 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 15:51:47 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:51:47 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:56:11 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:56:11 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 15:57:14 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 16:14:34 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[01-Jul-2018 19:51:45 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[01-Jul-2018 19:51:45 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[02-Jul-2018 06:10:44 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[02-Jul-2018 08:47:51 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[02-Jul-2018 10:21:03 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[02-Jul-2018 10:21:03 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[02-Jul-2018 14:46:20 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:22 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:32 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:37 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:39 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:47 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 14:46:48 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/m6fb8grc78rd/public_html/work/get_ledgers.php on line 13
+[02-Jul-2018 15:05:57 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[02-Jul-2018 15:22:30 UTC] PHP Notice:  Undefined index: email in /home/m6fb8grc78rd/public_html/work/get_offers.php on line 4
+[02-Jul-2018 16:27:22 UTC] PHP Warning:  Illegal string offset 'success' in /home/m6fb8grc78rd/public_html/work/changePrice.php on line 62
+[02-Jul-2018 16:29:42 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[02-Jul-2018 16:29:42 UTC] PHP Notice:  Undefined variable: products_email in /home/m6fb8grc78rd/public_html/work/send_mail.php on line 25
+[04-Jul-2018 09:06:21 UTC] PHP Notice:  Undefined index: order_date in /home/m6fb8grc78rd/public_html/work/get_bought.php on line 15
+[04-Jul-2018 11:41:43 UTC] PHP Notice:  Undefined index: order_date in /home/m6fb8grc78rd/public_html/work/get_bought.php on line 15
+[04-Jul-2018 11:41:57 UTC] PHP Notice:  Undefined index: order_date in /home/m6fb8grc78rd/public_html/work/get_bought.php on line 15
+[04-Jul-2018 11:43:55 UTC] PHP Notice:  Undefined index: order_date in /home/m6fb8grc78rd/public_html/work/get_bought.php on line 15
+[04-Jul-2018 14:07:24 UTC] PHP Parse error:  syntax error, unexpected '$order_numbers' (T_VARIABLE) in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 8
+[04-Jul-2018 14:08:19 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 10
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[04-Jul-2018 14:08:50 UTC] PHP Notice:  Undefined variable: promoter in /home/m6fb8grc78rd/public_html/work/get_orders_desktop.php on line 24
+[05-Jul-2018 11:36:09 UTC] PHP Notice:  Undefined index: sales_date in /home/m6fb8grc78rd/public_html/work/get_promoter_names.php on line 10
+[05-Jul-2018 11:38:25 UTC] PHP Notice:  Undefined index: sales_date in /home/m6fb8grc78rd/public_html/work/get_promoter_names.php on line 10
+[05-Jul-2018 11:43:02 UTC] PHP Notice:  Undefined index: sales_date in /home/m6fb8grc78rd/public_html/work/get_promoter_names.php on line 10
