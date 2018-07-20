@@ -1,0 +1,5 @@
+.table-view .column-header, .table-view .filler {
+    -fx-text-fill: white;
+    -fx-border-width: 0, 0;
+    -fx-font-size: 12px;
+}
