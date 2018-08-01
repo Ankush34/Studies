@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:elevation="10dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Dropped "
+                android:textSize="15dp"
+                android:id="@+id/offer_title"
+                android:textColor="@color/color_white"
+                android:layout_centerInParent="true"/>
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="45dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Product Name : "
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+               <TextView
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:textSize="10dp"
+                   android:textColor="@color/black"
+                   android:id="@+id/offer_product_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+           <LinearLayout
+                android:layout_width="match_parent"
+               android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Product Salable Price : "
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+               <TextView
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/offer_product_price"
+                   android:textSize="10dp"
+                   android:textColor="@color/black"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Khurana Sales Price : "
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/offer_product_discounted_price"
+                    android:textSize="10dp" android:textColor="@color/black"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Products In Stock: "
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/offer_product_instock_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Offer Description: "
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/offer_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/discount_offer_layout"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Discount Offered: "
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/discount_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/super_value_offer_layout"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Item Count To Buy: "
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/item_counts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Discounted Price: "
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/discounted_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+             </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/color_white"
+            android:layout_height="45dp">
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="25dp"
+                android:textSize="10dp"
+                android:layout_centerVertical="true"
+                android:text="Avail this offer"
+                android:textColor="@color/color_white"
+                android:background="@drawable/shape"
+                android:elevation="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerInParent="true"
+                android:id="@+id/avail_offer"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/delete_offer"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_eye_offers"
+                android:id="@+id/eye"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

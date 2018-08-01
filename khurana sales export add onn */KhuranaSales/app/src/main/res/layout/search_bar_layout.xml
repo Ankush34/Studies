@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_gravity="bottom|end"
+    android:layout_alignParentEnd="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.widget.CardView
+    android:background="@null"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="350dp"
+    android:layout_width="250dp"
+    android:layout_alignParentEnd="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/top_bar"
+        android:background="@color/colorPrimary"
+        android:layout_height="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:id="@+id/brand_selection_text"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_white"
+            android:text="Samsung"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/back_product_name_selection"
+            android:src="@drawable/ic_back_arrow_white"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_marginTop="25dp"
+    android:id="@+id/brand_products_list"
+    android:layout_marginBottom="60dp"
+    android:layout_height="wrap_content">
+
+</android.support.v7.widget.RecyclerView>
+    <LinearLayout
+    android:layout_gravity="bottom"
+    android:visibility="visible"
+    android:windowSoftInputMode="adjustResize"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:weightSum="5"
+    android:layout_height="60dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:id="@+id/search_text"
+        android:background="@null"
+        android:textSize="14dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:hint=" Search ..."
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"/>
+</LinearLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="35dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+    android:id="@+id/logo_white"
+    android:textColor="#ffffff"
+    android:text="Khurana Sales"
+    android:textSize="20dp"
+    android:layout_marginTop="3dp"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/materialviewpager_logoHeight"
+    />
+</RelativeLayout>

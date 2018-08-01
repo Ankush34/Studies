@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_below="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/address_desc"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+              android:layout_toRightOf="@+id/image"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Name :"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/area"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Area :"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/city"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="City :"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/state"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="State :"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/landmark"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Landmark :"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/address_desc"
+                android:layout_height="wrap_content">
+                           <Button
+                               android:layout_width="100dp"
+                               android:backgroundTint="@color/red"
+                               android:text="Delete"
+                                android:layout_weight="0.3"
+                               android:textColor="@color/color_white"
+                               android:layout_margin="10dp"
+                               android:background="@drawable/shape"
+                               android:layout_height="25dp" />
+                <Button
+                    android:layout_width="100dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Edit"
+                    android:layout_weight="0.3"
+                    android:textColor="@color/color_white"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/tick"
+                android:id="@+id/colored_tick"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/colorless_tick"
+                android:src="@drawable/tick1"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
