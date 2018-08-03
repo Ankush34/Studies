@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NotificationUserList">
+    <item
+        android:id="@+id/action_calender"
+        android:orderInCategory="200"
+        android:title="DateFilter"
+        android:icon="@drawable/ic_calendar"
+        app:showAsAction="always"></item>
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="300"
+        android:title="Profile"
+        app:actionLayout="@layout/user_menu_icon"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_shopping"
+        android:menuCategory="secondary"
+        android:orderInCategory="400"
+        android:title="Cart"
+        app:actionLayout="@layout/shopping_bag_layout_menu"
+        app:showAsAction="always"></item>
+    <item
+        android:title="Login"
+        android:orderInCategory="101"
+        app:showAsAction="never"
+        android:id="@+id/signin"/>
+    <item
+        android:title="Signup"
+        android:orderInCategory="102"
+        app:showAsAction="never"
+        android:id="@+id/signup"/>
+    <item
+        android:title="Logout"
+        android:orderInCategory="103"
+        app:showAsAction="never"
+        android:id="@+id/signout"/>
+
+</menu>
