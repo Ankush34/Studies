@@ -1,0 +1,28 @@
+<?php
+ 
+$conn = mysqli_connect("localhost", "KhuranaSales", "9270481042khurana") or die(mysqli_error());
+$db = mysqli_select_db($conn, "KhuranaSalesRastapeth");
+
+$email = $_GET["email"];
+$from_date = $_GET["from"];
+$to_date = $_GET["to"];
+echo "email: ".$email;
+echo $from_date;
+echo $to_date;
+
+$query = "select * from khurana_sales_orders where sales_order_date > '$from_date' AND sales_order_date < '$to_date' AND sales_order_customer_email='$email'";
+echo $query;
+$result = mysqli_query($conn, $query);
+if(mysqli_num_rows($result)>0)
+{
+  while($row = mysqli_fetch_array($result))
+  {
+    echo $row["sales_order_product_name"];
+    
+  }  
+}
+else
+{
+echo "some error ";
+}
+?>

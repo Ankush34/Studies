@@ -1,0 +1,64 @@
+Return-Path: <>
+Delivered-To: m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net
+Received: from sg2plcpnl0100.prod.sin2.secureserver.net
+	by sg2plcpnl0100.prod.sin2.secureserver.net with LMTP id 8AnPLD3QMFsPIw8AUgN0IA
+	for <m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net>; Mon, 25 Jun 2018 04:21:33 -0700
+Return-path: <>
+Envelope-to: m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net
+Delivery-date: Mon, 25 Jun 2018 04:21:33 -0700
+Received: from mailnull by sg2plcpnl0100.prod.sin2.secureserver.net with local (Exim 4.89_1)
+	id 1fXPYr-000Fmo-JC
+	for m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net; Mon, 25 Jun 2018 04:21:33 -0700
+X-Failed-Recipients: $email@sg2plcpnl0100.prod.sin2.secureserver.net
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@sg2plcpnl0100.prod.sin2.secureserver.net>
+To: m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net
+Content-Type: multipart/report; report-type=delivery-status; boundary=1529925693-eximdsn-903042758
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1fXPYr-000Fmo-JC@sg2plcpnl0100.prod.sin2.secureserver.net>
+Date: Mon, 25 Jun 2018 04:21:33 -0700
+
+--1529925693-eximdsn-903042758
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  $email@sg2plcpnl0100.prod.sin2.secureserver.net
+    Unrouteable address
+
+--1529925693-eximdsn-903042758
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; sg2plcpnl0100.prod.sin2.secureserver.net
+
+Action: failed
+Final-Recipient: rfc822;$email@sg2plcpnl0100.prod.sin2.secureserver.net
+Status: 5.0.0
+
+--1529925693-eximdsn-903042758
+Content-type: message/rfc822
+
+Return-path: <m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net>
+Received: from m6fb8grc78rd by sg2plcpnl0100.prod.sin2.secureserver.net with local (Exim 4.89_1)
+	(envelope-from <m6fb8grc78rd@sg2plcpnl0100.prod.sin2.secureserver.net>)
+	id 1fXPYr-000FmZ-Fr
+	for $email@sg2plcpnl0100.prod.sin2.secureserver.net; Mon, 25 Jun 2018 04:21:33 -0700
+To: $email@sg2plcpnl0100.prod.sin2.secureserver.net
+Subject: Invoice Generated,  An Order Took Place
+X-PHP-Script: khuranasales.co.in/work/set_order_bought.php for 49.35.80.220
+X-PHP-Filename: /home/m6fb8grc78rd/public_html/work/set_order_bought.php REMOTE_ADDR: 49.35.80.220
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: khuranasales2015@gmail.com
+Reply-To: khuranasales2015@gmail.com
+X-Mailer: PHP/7.1.16
+Message-Id: <E1fXPYr-000FmZ-Fr@sg2plcpnl0100.prod.sin2.secureserver.net>
+Date: Mon, 25 Jun 2018 04:21:33 -0700
+
+<html><body><h1>Hi Ankush!</h1><p style="font-size:18px;">Invoice HasBeen Generated</p><table style="border-collapse: collapse;border: 1px solid black;"><th>Product Name</th><th>Total</th><th>Selling Price</th><th>Customer Name</th><th>Customer phone</th><tr><td></td><td></td><td></td><td></td><td></td></tr></table></body></html>
+
+--1529925693-eximdsn-903042758--

@@ -1,0 +1,371 @@
+AWSTATS DATA FILE 7.4 (build 20140726)
+# If you remove this file, all statistics for date 201803 will be lost/reset.
+# Last config file used to build this data file was /home/m6fb8grc78rd/tmp/awstats/awstats.khuranasales.co.in.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2019                
+POS_TIME 2691                
+POS_VISITOR 7024                
+POS_DAY 9146                
+POS_DOMAIN 3383                
+POS_LOGIN 3654                
+POS_ROBOT 3809                
+POS_WORMS 4015                
+POS_EMAILSENDER 4146                
+POS_EMAILRECEIVER 4289                
+POS_SESSION 9656                
+POS_SIDER 9862                
+POS_FILETYPES 4424                
+POS_DOWNLOADS 4580                
+POS_OS 4628                
+POS_BROWSER 4821                
+POS_SCREENSIZE 5178                
+POS_UNKNOWNREFERER 5252                
+POS_UNKNOWNREFERERBROWSER 5393                
+POS_ORIGIN 5529                
+POS_SEREFERRALS 5669                
+POS_PAGEREFS 5813                
+POS_SEARCHWORDS 5961                
+POS_KEYWORDS 6113                
+POS_MISC 2355                
+POS_ERRORS 6172                
+POS_CLUSTER 3510                
+POS_SIDER_404 6285                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180401090323 1 0 10139057187794
+FirstTime 20180310220758
+LastTime 20180331233939
+LastUpdate 20180402012525 1 0 0 0 0
+TotalVisits 77                  
+TotalUnique 52                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 53                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+RealPlayerSupport 0 0 0
+DirectorSupport 0 0 0
+AddToFavourites 0 0 0
+FlashSupport 0 0 0
+QuickTimeSupport 0 0 0
+TotalMisc 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+JavaEnabled 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 333 335 148539 12 15 12262
+1 82 82 19891 9 14 10812
+2 82 82 35933 23 26 4267
+3 21 22 43541 24 24 18660
+4 84 84 29423 28 30 18316
+5 257 263 269997 14 20 8440
+6 37 37 15623 2 7 6175
+7 52 52 18348 6 7 1890
+8 16 17 42238 6 14 12461
+9 0 0 0 4 6 5494
+10 1 1 945 6 12 10812
+11 53 54 60940 6 7 4549
+12 216 218 158530 9 12 11076
+13 121 127 415204 5 7 5582
+14 0 0 0 5 7 6439
+15 0 0 0 3 5 4549
+16 17 17 16065 5 6 5582
+17 1 1 945 3 5 4549
+18 2 2 2908 5 7 18033
+19 1 1 945 3 6 5406
+20 1 1 945 3 3 2835
+21 3 4 37128 8 13 9098
+22 55 58 155542 3 9 6263
+23 194 194 44569 7 8 4549
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 4
+in 1561 1583 1411044
+us 65 66 92727
+ca 2 2 13483
+fr 1 1 945
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 2
+googlebot 92 98534 20180331124559 0
+no_user_agent 2 1890 20180316160954 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 5
+js 18 610115 0 0
+html 92 69619 0 0
+jpg 5 325098 0 0
+Unknown 3 37616 0 0
+php 1534 475751 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 10
+winnt 2 2
+Unknown 19 19
+linux 690 670
+ios_iphone 3 2
+macosx 8 8
+win7 34 34
+win16 1 1
+win8.1 5 4
+linuxandroid 888 887
+winxp 2 2
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 15
+chrome63.0.3239.132 8 7
+android 885 885
+chrome65.0.3325.181 38 37
+chrome52.0.2743.116 2 2
+chrome50.0.2631.0 1 1
+Unknown 19 19
+chrome61.0.3163.100 8 8
+chrome64.0.3282.140 653 636
+safari11.0 3 2
+firefox58.0 26 25
+firefox13.0.1 1 1
+chrome62.0.3202.75 3 2
+opera10.50 1 1
+opera12.16 1 1
+chrome65.0.3325.109 3 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+Ruby 20180331162014
+Mnogosearch-3.1.21 20180329185511
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+Mnogosearch-3.1.21 20180329185511
+Ruby 20180331162014
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 1282 1287
+From1 0 0
+From2 0 0
+From3 0 0
+From4 347 365
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+404 111 94270
+206 2 1913
+500 48 1492
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 13
+/home/amura/Desktop/khurana_sales_logo.js 2 http://khuranasales.co.in/work/invoice.html
+/ 1 -
+/work/khurana/get_viewed.phpankushkhurana34@gmail.com 1 -
+/ads.txt 23 -
+/work/khurana_sales_invoice_customer_data.php 3 http://khuranasales.co.in/work/invoice.php
+/work/getProducts.php 45 -
+/work/khurana_sales_logo.js 1 -
+/robots.txt 28 -
+/work/khurana/get_viewed.php 1 -
+/etc 1 -
+/work/ 1 -
+/work/login.php 2 -
+/work/invoice.html 2 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 53
+49.35.67.31 281 284 221335 20180326132450
+49.35.41.37 181 181 31718 20180330001318
+49.35.8.169 171 171 30638 20180330012710
+49.35.92.102 144 144 15083 20180323052717
+106.77.19.244 87 89 116218 20180327052017
+49.35.15.141 82 82 13434 20180330002730
+49.15.21.227 66 67 74302 20180327122315
+49.35.115.184 62 63 58683 20180326064900
+49.35.11.174 46 46 13291 20180330055211
+49.35.24.65 45 45 20290 20180329230628
+49.35.89.250 42 42 18450 20180323033403
+49.35.21.229 40 40 8512 20180330004331
+49.35.103.64 38 43 339412 20180324075539
+198.12.131.80 34 34 30247 20180323021534
+106.66.96.87 29 30 43432 20180331233939
+49.35.92.96 29 29 10743 20180323120537
+49.35.88.91 24 24 8366 20180331233920
+106.78.216.18 20 22 71264 20180325053914
+49.35.96.206 20 21 39813 20180326005529
+49.35.105.113 17 18 41411 20180326083901
+123.201.125.178 16 18 76493 20180329004711
+49.35.55.123 14 14 4202 20180330004648
+49.35.7.93 13 13 4202 20180330003210
+106.77.201.43 12 12 1306 20180323120040
+106.77.52.196 12 12 995 20180330022137
+184.168.224.229 2 2 1890 20180324161615
+106.77.52.131 3 3 108 20180329234103
+106.78.232.117 2 2 13484 20180310220804
+64.233.173.8 0 1 33484 
+54.67.59.131 8 8 7560 20180331190712
+27.97.143.56 3 3 182 20180330052148
+184.168.224.190 3 3 2835 20180329201827
+106.77.54.138 1 1 36 20180330003428
+64.233.173.10 1 1 424 20180325054716
+106.77.4.6 3 3 371 20180326070909
+49.248.81.85 3 4 36471 20180327224353
+49.35.121.201 9 9 3545 20180323070049
+106.78.217.238 2 3 34057 20180325054056
+49.35.14.89 2 2 3260 20180329043902
+106.77.52.43 4 4 145 20180329230431
+49.35.4.138 9 9 4058 20180330001759
+117.218.132.100 1 1 945 20180326010623
+184.168.224.231 4 4 3780 20180330162327
+64.233.173.6 1 1 149 20180325054717
+173.49.24.118 1 1 1963 20180329185511
+49.35.61.133 9 9 4058 20180329062717
+49.35.106.203 9 9 3560 20180326043428
+184.168.224.230 9 9 8505 20180331162014
+94.23.35.126 1 1 945 20180312030134
+106.77.59.228 10 11 43171 20180327224407
+192.99.67.12 2 2 13483 20180311225504
+54.212.20.150 1 1 945 20180327102029
+54.185.230.132 1 1 945 20180320112532
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 21
+20180310 2 2 13484 1
+20180311 4 4 15373 3
+20180312 2 2 1890 2
+20180313 1 1 945 1
+20180314 1 1 945 1
+20180315 1 1 945 1
+20180316 1 1 945 1
+20180317 2 2 1890 2
+20180318 1 1 945 1
+20180320 3 3 2835 3
+20180321 1 1 945 1
+20180322 1 1 945 1
+20180323 279 279 83970 9
+20180324 39 44 340357 2
+20180325 28 33 175325 7
+20180326 394 400 367063 8
+20180327 168 173 272052 6
+20180328 1 1 945 1
+20180329 198 199 92841 9
+20180330 447 447 89871 12
+20180331 55 56 53688 5
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+5mn-15mn 9
+1h+ 6
+30mn-1h 3
+30s-2mn 2
+15mn-30mn 6
+0s-30s 47
+2mn-5mn 4
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 17
+/work/get_products.php 538 194437 16 10
+/work/count.php 338 8425 4 12
+/work/invoice.php 203 213294 8 0
+/work/khurana_sales_invoice_data.php 198 29502 1 6
+/work/khurana_sales_invoice_customer_info.php 150 20454 0 6
+/ 67 64333 35 33
+/work/login.php 60 5788 4 2
+/work/add_product.php 26 2209 2 2
+/work/price.php 11 954 0 1
+/work/khurana_sales_invoice_data.php/ 9 1462 1 0
+/work/khurana_sales_invoice_customer_info.php/ 7 754 2 1
+/work/invoice.html 7 3063 3 1
+/work/get_viewed.php 5 482 0 1
+/work/changePrice.php 4 164 0 0
+/cpanel 3 37616 0 2
+/ankush.html 2 7 0 0
+/work/register.php 1 42 1 0
+END_SIDER

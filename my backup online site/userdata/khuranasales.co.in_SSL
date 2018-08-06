@@ -1,0 +1,45 @@
+--- 
+documentroot: /home/m6fb8grc78rd/public_html
+group: m6fb8grc78rd
+hascgi: 1
+homedir: /home/m6fb8grc78rd
+ifmodulealiasmodule: 
+  scriptalias: 
+    - 
+      path: /home/m6fb8grc78rd/public_html/cgi-bin/
+      url: /cgi-bin/
+ifmoduleincludemodule: 
+  directoryhomemfbgrcrdpublichtml: 
+    ssilegacyexprparser: 
+      - 
+        value: " On"
+ifmodulesslmodule: 
+  directoryhomemfbgrcrdpublichtmlcgibin: 
+    ssloptions: +StdEnvVars
+  setenvif: 
+    - 
+      attribute: User-Agent
+      env_variables: nokeepalive ssl-unclean-shutdown
+      regex: "\".*MSIE.*\""
+  sslcertificatefile: /var/cpanel/ssl/installed/certs/khuranasales_co_in_c20fb_75b7b_1552280683_71c86b8b39a44c5d668f675872cc06a4.crt
+  sslcertificatekeyfile: /var/cpanel/ssl/installed/keys/c20fb_75b7b_1bd8956f29c10c9eeb1895f6af1e3311.key
+  sslengine: 'on'
+ifmoduleuserdirmodule: 
+  ifmodulempmitkc: 
+    ifmoduleruidmodule: {}
+
+ip: 166.62.10.34
+ipv6: ~
+owner: gdresell
+phpopenbasedirprotect: 1
+port: 443
+secruleengineoff: ~
+serveradmin: webmaster@khuranasales.co.in
+serveralias: mail.khuranasales.co.in www.khuranasales.co.in
+servername: khuranasales.co.in
+ssl: 1
+sslcertificatefile: /var/cpanel/ssl/installed/certs/khuranasales_co_in_c20fb_75b7b_1552280683_71c86b8b39a44c5d668f675872cc06a4.crt
+sslcertificatekeyfile: /var/cpanel/ssl/installed/keys/c20fb_75b7b_1bd8956f29c10c9eeb1895f6af1e3311.key
+usecanonicalname: 'Off'
+user: m6fb8grc78rd
+userdirprotect: ''

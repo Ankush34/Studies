@@ -1,0 +1,41 @@
+; cPanel first:11.62.0.35 (update_time):1520744675 11.62.0.35: Cpanel::ZoneFile::VERSION:1.3 hostname:sg2plcpnl0100.prod.sin2.secureserver.net latest:11.62.0.35
+; Zone file for khuranasales.co.in
+$TTL 14400
+@      86400	IN      SOA     182.50.132.231. hostingex.godaddy.com. (
+		2018031103	; serial, todays date+todays
+		3600		; refresh, seconds
+		7200		; retry, seconds
+		1209600		; expire, seconds
+		86400 )		; minimum, seconds
+
+khuranasales.co.in. 86400 IN NS 182.50.132.231.
+khuranasales.co.in. 86400 IN NS 182.50.132.232.
+
+
+khuranasales.co.in. IN A 166.62.10.34
+
+khuranasales.co.in. IN MX 0 khuranasales.co.in.
+
+mail IN CNAME khuranasales.co.in.
+www IN CNAME khuranasales.co.in.
+ftp IN A 166.62.10.34
+
+khuranasales.co.in. IN TXT "v=spf1 +a +mx +ip4:182.50.135.33 ~all"
+cpanel IN A 166.62.10.34
+webdisk IN A 166.62.10.34
+cpcalendars IN A 166.62.10.34
+cpcontacts IN A 166.62.10.34
+whm IN A 166.62.10.34
+webmail IN A 166.62.10.34
+autoconfig IN A 166.62.10.34
+autodiscover IN A 166.62.10.34
+_autodiscover._tcp IN SRV 0 0 443 cpanelemaildiscovery.cpanel.net.
+_caldav._tcp IN SRV 0 0 2079 sg2plcpnl0100.prod.sin2.secureserver.net.
+_caldavs._tcp IN SRV 0 0 2080 sg2plcpnl0100.prod.sin2.secureserver.net.
+_carddav._tcp IN SRV 0 0 2079 sg2plcpnl0100.prod.sin2.secureserver.net.
+_carddavs._tcp IN SRV 0 0 2080 sg2plcpnl0100.prod.sin2.secureserver.net.
+_caldav._tcp IN TXT path=/
+_caldavs._tcp IN TXT path=/
+_carddav._tcp IN TXT path=/
+_carddavs._tcp IN TXT path=/
+default._domainkey IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwvsXXvgkEcer6QWTWwtkEz9MeDMD6BgOMM/9NJpE1apNjnbr3SY4ZuE2OeyEWqJlW+2foCIwhsWKrXYLfWU8xeHRs+PTDmdYy2xKARv2SUffHs2mupXzE9xITIj1gcSL53VCMJP9oRpBFNKNEbQmBA0hsYsij2DtxZVBkAgXw0GBDaLt1i28nT4bxS+mdWTCE" Hte9npnx2G25SKU/Xl/W1nWFVsidZnzlPFJwOwMaqo57i28nrw8lmZhnZQPvpoWrYyrFs05b+vVIx2KKHPAaqPewag4nN1KHLMpA372O8Bxt6F5CvAj9iHFj6Obmh92jbAB3GIHiCAIwfLcON7yhQIDAQAB\;

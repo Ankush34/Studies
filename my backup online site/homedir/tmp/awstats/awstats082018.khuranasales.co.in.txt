@@ -1,0 +1,283 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201808 will be lost/reset.
+# Last config file used to build this data file was /home/m6fb8grc78rd/tmp/awstats/awstats.khuranasales.co.in.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2019                
+POS_TIME 2691                
+POS_VISITOR 6520                
+POS_DAY 7076                
+POS_DOMAIN 3341                
+POS_LOGIN 3596                
+POS_ROBOT 3751                
+POS_WORMS 4075                
+POS_EMAILSENDER 4206                
+POS_EMAILRECEIVER 4349                
+POS_SESSION 7261                
+POS_SIDER 7436                
+POS_FILETYPES 4484                
+POS_DOWNLOADS 4583                
+POS_OS 4631                
+POS_BROWSER 4735                
+POS_SCREENSIZE 4864                
+POS_UNKNOWNREFERER 4938                
+POS_UNKNOWNREFERERBROWSER 5072                
+POS_ORIGIN 5174                
+POS_SEREFERRALS 5308                
+POS_PAGEREFS 5452                
+POS_SEARCHWORDS 5600                
+POS_KEYWORDS 5752                
+POS_MISC 2355                
+POS_ERRORS 5811                
+POS_CLUSTER 3452                
+POS_SIDER_404 5909                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180806024731 2003 383697 6622154276192
+FirstTime 0
+LastTime 20180806022955
+LastUpdate 20180806052007 2003 0 2003 0 0
+TotalVisits 16                  
+TotalUnique 11                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 11                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+JavascriptDisabled 0 0 0
+FlashSupport 0 0 0
+JavaEnabled 0 0 0
+QuickTimeSupport 0 0 0
+DirectorSupport 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+TotalMisc 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 2 2 284
+1 0 0 0 245 254 132403
+2 4 4 470 205 205 1177649
+3 0 0 0 2 2 281
+4 0 0 0 38 38 7971
+5 0 0 0 27 29 12638
+6 0 0 0 12 12 1686
+7 1 1 73 159 160 88489
+8 51 51 554101 495 495 1154283
+9 7 7 1417 372 372 56116
+10 1 1 945 66 66 29391
+11 2 2 613 155 156 36213
+12 24 24 231630 343 347 192993
+13 5 5 42379 353 353 237394
+14 0 0 0 167 167 58033
+15 4 4 47931 103 104 46813
+16 34 34 15007 118 127 155673
+17 3 3 2835 0 2 1714
+18 0 0 0 0 0 0
+19 0 0 0 0 2 1714
+20 0 0 0 0 0 0
+21 1 1 945 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 1 1 945
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 3
+in 94 94 616243
+us 35 35 280450
+ma 8 8 1653
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 5
+Dalvik/ 2798 1200866 20180806023927 0
+java 53 2168253 20180806024731 0
+bingbot/ 1 945 20180802050148 0
+Googlebot/ 1 945 20180805233155 0
+(firefox/)([0-9]\.|[0-1][0]\.) 1 1963 20180805091054 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 2
+php 130 891731 0 0
+html 7 6615 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 3
+macosx12 2 2
+Unknown 60 60
+linux 75 75
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 4
+netscape5.0 55 55
+Unknown 5 5
+chrome67.0.3396.99 75 75
+chrome61.0.3163.100 2 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+Mozilla/5.0 20180806022955
+Ruby 20180805165552
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+Ruby 20180805165552
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 137 137
+From1 0 0
+From2 0 0
+From3 0 0
+From4 0 0
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+500 12 0
+404 26 19711
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 10
+/work/get_product_by_name_desktop.php 1 -
+/work/get_stock_with_batch_export.php 2 -
+/work/get_brands.php 1 -
+/work/uploads/my_upload.jpg 7 -
+/work/get_promoters_desktop.php 2 -
+/work/update_order_customer_info.php 1 -
+/robots.txt 6 -
+/work/get_coupons.php 1 -
+/work/get_promoters.php 1 -
+/ads.txt 4 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 11
+117.218.132.100 55 55 554408 20180806022955 20180806021602 /work/get_godown_locations_desktop.php
+49.35.233.64 36 36 61048 20180804161953
+157.33.134.225 23 23 231456 20180802124131
+45.252.68.172 8 8 1653 20180805091050
+157.33.144.65 5 5 42379 20180802134746
+184.168.224.231 3 3 2835 20180804165732
+184.168.224.190 2 2 1890 20180805165552
+52.53.201.78 2 2 1890 20180804100934
+49.14.64.91 1 1 439 20180801111941
+106.79.148.142 1 1 174 20180801120719
+49.14.92.75 1 1 174 20180801111612
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 6
+20180801 4 4 1732 4
+20180802 30 30 275725 4
+20180803 1 1 945 1
+20180804 38 38 62938 3
+20180805 60 60 556536 3
+20180806 4 4 470 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+1h+ 1
+0s-30s 10
+30mn-1h 3
+15mn-30mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 13
+/work/get_products_with_batch_export.php 28 273835 2 2
+/work/get_godown_locations_desktop.php 27 1971 1 0
+/work/update_order_customer_info.php 25 2264 0 0
+/work/get_ledgers.php 19 60437 2 2
+/work/login_desktop.php 8 1152 1 0
+/ 7 6615 7 7
+/work/get_orders_desktop.php 5 132404 0 0
+/work/get_promoter_names.php 5 1779 2 2
+/work/get_products.php 5 121940 0 0
+/work/get_products_with_batch_desktop.php 3 276147 0 0
+/work/get_promoters_sold_desktop_filtered.php 3 14433 0 0
+/work/get_categories.php 1 439 1 1
+/work/get_searched_products_desktop.php 1 4930 0 1
+END_SIDER

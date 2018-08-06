@@ -1,0 +1,40 @@
+--- 
+customlog: 
+  - 
+    format: combined
+    target: /usr/local/apache/domlogs/khuranasales.co.in
+  - 
+    format: "\"%{%s}t %I .\\n%{%s}t %O .\""
+    target: /usr/local/apache/domlogs/khuranasales.co.in-bytes_log
+documentroot: /home/m6fb8grc78rd/public_html
+group: m6fb8grc78rd
+hascgi: 1
+homedir: /home/m6fb8grc78rd
+ifmodulealiasmodule: 
+  scriptalias: 
+    - 
+      path: /home/m6fb8grc78rd/public_html/cgi-bin/
+      url: /cgi-bin/
+ifmoduleincludemodule: 
+  directoryhomemfbgrcrdpublichtml: 
+    ssilegacyexprparser: 
+      - 
+        value: " On"
+ifmoduleuserdirmodule: 
+  ifmodulempmitkc: 
+    ifmoduleruidmodule: {}
+
+ip: 166.62.10.34
+owner: gdresell
+phpopenbasedirprotect: 1
+port: 80
+scriptalias: 
+  - 
+    path: /home/m6fb8grc78rd/public_html/cgi-bin
+    url: /cgi-bin/
+serveradmin: webmaster@khuranasales.co.in
+serveralias: mail.khuranasales.co.in www.khuranasales.co.in
+servername: khuranasales.co.in
+usecanonicalname: 'Off'
+user: m6fb8grc78rd
+userdirprotect: ''
