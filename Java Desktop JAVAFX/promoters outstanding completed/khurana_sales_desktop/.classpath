@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/amura/Downloads/mysql-connector-java-5.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Downloads/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Desktop/jfoenix-8.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Desktop/java-json.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Downloads/jar_files/rt-2.3.0.2.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Desktop/rt.jar"/>
+	<classpathentry kind="lib" path="/home/amura/Desktop/jmetro-3.3.0.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/FXParallax-2.0.0.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/java-json.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/jfoenix-8.0.4.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/jmetro-3.3.0.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="src/required_jars/FXRibbon-1.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
