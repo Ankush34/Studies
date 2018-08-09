@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "935298770497",
+    "firebase_url": "https://ksales-6e242.firebaseio.com",
+    "project_id": "ksales-6e242",
+    "storage_bucket": "ksales-6e242.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935298770497:android:c1d479538674dc95",
+        "android_client_info": {
+          "package_name": "in.co.khuranasales.khuranasales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935298770497-4q2fmqfc2g8ghj91htqiaqsj2obdh4nn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.co.khuranasales.khuranasales",
+            "certificate_hash": "66031f5835794e62a6e5f64b3240418632fff1b3"
+          }
+        },
+        {
+          "client_id": "935298770497-9c1lper8vmau4rtbadffik7juto29r78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9YUTKdtjyO0id7wl_tW_g180mbm3MdY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935298770497-9c1lper8vmau4rtbadffik7juto29r78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

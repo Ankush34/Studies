@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SpringIndicator">
+
+        <!--tab text color -->
+        <attr name="siTextColor" format="reference"/>
+
+        <!--tab text color which is selected-->
+        <attr name="siSelectedTextColor" format="reference"/>
+
+        <!--tab item bg -->
+        <attr name="siTextBg" format="reference"/>
+
+        <!--tab text size-->
+        <attr name="siTextSize" format="dimension"/>
+
+        <!--indicator bg color-->
+        <attr name="siIndicatorColor" format="reference"/>
+
+        <!--indicator bg colors. should equals your titles count-->
+        <attr name="siIndicatorColors" format="reference"/>
+
+        <!--max indicator radius-->
+        <attr name="siRadiusMax" format="dimension"/>
+
+        <!--min indicator radius when moving-->
+        <attr name="siRadiusMin" format="dimension"/>
+
+    </declare-styleable>
+    <declare-styleable name="MaterialViewPager">
+        <attr name="viewpager_header" format="reference"/>
+        <attr name="viewpager_logo" format="reference"/>
+        <attr name="viewpager_pagerTitleStrip" format="reference"/>
+        <attr name="viewpager_viewpager" format="reference"/>
+        <attr name="viewpager_logoMarginTop" format="dimension"/>
+        <attr name="viewpager_color" format="color"/>
+        <attr name="viewpager_headerHeight" format="dimension"/>
+        <attr name="viewpager_headerAlpha" format="float"/>
+        <attr name="viewpager_imageHeaderDarkLayerAlpha" format="float"/>
+        <attr name="viewpager_hideToolbarAndTitle" format="boolean"/>
+        <attr name="viewpager_hideLogoWithFade" format="boolean"/>
+        <attr name="viewpager_enableToolbarElevation" format="boolean"/>
+        <attr name="viewpager_parallaxHeaderFactor" format="float"/>
+        <attr name="viewpager_headerAdditionalHeight" format="dimension"/>
+        <attr name="viewpager_displayToolbarWhenSwipe" format="boolean"/>
+        <attr name="viewpager_transparentToolbar" format="boolean"/>
+        <attr name="viewpager_animatedHeaderImage" format="boolean"/>
+        <attr name="viewpager_disableToolbar" format="boolean"/>
+
+    </declare-styleable>
+
+        <declare-styleable name="FoldingCell">
+            <attr name="backSideColor" format="color" />
+            <attr name="animationDuration" format="integer" />
+            <attr name="additionalFlipsCount" format="integer" />
+        </declare-styleable>
+
+</resources>

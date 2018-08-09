@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this has dependency in another layout where we have selection like this list -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:id="@+id/select_brand_card"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/checkedTextBrandSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        android:text="Samsung"
+        android:layout_centerVertical="true"
+        />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:id="@+id/unchecked"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/tick1"
+        />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:id="@+id/checked"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/tick"
+        />
+
+</RelativeLayout>
