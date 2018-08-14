@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_weight="0.8"
+    android:layout_marginLeft="10dp"
+    android:weightSum="2"
+    android:id="@+id/tax_items_details1"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Type"
+            android:textSize="12dp"
+            android:id="@+id/payment_type"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Amount"
+            android:id="@+id/payment_amount"
+            android:layout_weight="0.9"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
