@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:visibility="invisible"
+    android:clickable="true "
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="10dp"
+    android:background="#7000"
+    >
+<android.support.v7.widget.CardView
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="67dp"
+    android:layout_marginLeft="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:elevation="10dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/brands_selection_top_bar"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_white"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Brands"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/back_brand_selection"
+            android:src="@drawable/ic_back_arrow_white"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/brands_selection_recycler_view"
+        android:layout_below="@+id/brands_selection_top_bar"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="65dp">
+        <ImageView
+            android:id="@+id/brand_selection_next"
+            android:layout_centerInParent="true"
+            android:src="@drawable/right_arrow_login_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+</RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>

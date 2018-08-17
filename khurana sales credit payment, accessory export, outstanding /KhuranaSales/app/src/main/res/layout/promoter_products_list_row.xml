@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <TextView
+     android:layout_margin="10dp"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="12dp"
+     android:id="@+id/product_name"
+     android:textColor="@color/black"/>
+   <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+       android:layout_marginBottom="10dp"
+       android:layout_below="@+id/product_name"
+     android:layout_marginLeft="40dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="10dp"
+          android:textColor="@color/colorPrimary"
+          android:text="Price:    200000/-"
+          android:id="@+id/product_sold_price"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/product_sold_price"
+        android:textSize="10dp"
+        android:text="Customer:     Mukesh Khurana"
+        android:id="@+id/product_sold_customer_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/product_sold_customer_name"
+        android:textSize="10dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Contact: 9623099600"
+        android:id="@+id/product_sold_customer_phone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/product_sold_customer_phone"
+        android:textSize="10dp"
+        android:text="Payment Mode:   Cash"
+        android:id="@+id/product_sold_quantity"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/product_sold_quantity"
+        android:textSize="10dp"
+        android:text="Date Of Selling:     12/9/2018"
+        android:id="@+id/product_sold_status"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+           android:textColor="@color/colorPrimary"
+           android:layout_below="@+id/product_sold_status"
+           android:textSize="10dp"
+           android:text="Status: Pending"
+           android:id="@+id/product_sold_invoice_status"/>
+
+   </RelativeLayout>
+</RelativeLayout>
