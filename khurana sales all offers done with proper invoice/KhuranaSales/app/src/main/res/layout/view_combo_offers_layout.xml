@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#C000"
+    android:visibility="invisible"
+    android:id="@+id/combo_offer_view_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:id="@+id/close_combo_offer_layout"
+        android:layout_height="45dp">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="6dp"
+        android:src="@drawable/ic_close_notification_window"/>
+    </RelativeLayout>
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_marginTop="55dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/offers_recycler"
+    android:layout_height="wrap_content">
+</android.support.v7.widget.RecyclerView>
+</RelativeLayout>

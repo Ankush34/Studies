@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".provideAccessActivity">
+    <item
+        android:title="Cash"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:id="@+id/cash"/>
+    <item
+        android:title="Cheque"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:id="@+id/cheque"/>
+    <item
+        android:title="Paytm"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/paytm"/>
+    <item
+        android:title="Card (Debit/Credit)"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/card"/>
+    <item
+        android:title="Finance"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/finance"/>
+    <item
+        android:title="Credit"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/credit"/>
+    <item
+        android:title="Multiple"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/multiple"/>
+
+</menu>

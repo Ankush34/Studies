@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto"
+    package="in.co.khuranasales.khuranasales">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <application
+        android:name="in.co.khuranasales.khuranasales.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher33"
+        android:label="Khurana Sales"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Transparent">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/khuranalogo" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_white" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/firebase_notification_channel_id"/>
+
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name="in.co.khuranasales.khuranasales.App_start"
+            android:noHistory="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"></action>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity android:name="in.co.khuranasales.khuranasales.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="in.co.khuranasales.khuranasales.Buy_Now_Activity"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name="in.co.khuranasales.khuranasales.Activity_Login"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="in.co.khuranasales.khuranasales.Product_view_activity"
+              android:theme="@style/AppTheme2"
+              android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="in.co.khuranasales.khuranasales.Product_desc_activity"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name="in.co.khuranasales.khuranasales.Buy_final_activity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name="in.co.khuranasales.khuranasales.Final_Cart"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name="in.co.khuranasales.khuranasales.Invoice_Activity"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".provideAccessActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".CategorizeDataActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".NotificationUserList"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".SoldItemPromotersActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".notification.NotificationActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".Offers.OffersActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".BestSelling.bestSellingActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".NewLaunches.newLaunchesActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".aboutPage.aboutActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".ServiceCenters.service_center_main_activity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".exportWorkers.exportMainActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".edit_profile.editProfileActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme2">
+        </activity>
+    </application>
+</manifest>

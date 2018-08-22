@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:id="@+id/card_price"
+                 android:text="200"
+                 android:textColor="@color/black"
+                 android:layout_marginLeft="15dp"
+                 android:background="@drawable/coupon_price_shape"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:layout_width = "20dp"
+                android:layout_height = "20dp"
+                android:background="@drawable/sub"
+                android:id="@+id/sub"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true" />
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:id="@+id/coupon_count"
+                android:textSize="20dp"
+                android:layout_margin="16dp"
+                android:layout_toRightOf="@+id/sub"
+                android:layout_marginBottom="20dp" />
+             <Button
+                 android:layout_width = "20dp"
+                 android:layout_height = "20dp"
+                 android:background="@drawable/add"
+                 android:layout_marginTop="25dp"
+                 android:layout_toRightOf="@+id/coupon_count"
+                 android:textSize="25dp"
+                 android:id="@+id/add" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CategorizeDataActivity">
+    <item
+        android:id="@+id/actionNotifications"
+        android:icon="@drawable/ic_notification_bell"
+        android:menuCategory="secondary"
+        android:orderInCategory="500"
+        android:title="Search"
+        app:actionLayout="@layout/notification_layout"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="400"
+        android:title="Profile"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_search_icon"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_shopping"
+        android:menuCategory="secondary"
+        android:orderInCategory="200"
+        android:title="Cart"
+        app:actionLayout="@layout/shopping_bag_layout_menu"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:title="Login"
+        android:orderInCategory="101"
+        app:showAsAction="never"
+        android:id="@+id/signin"/>
+    <item
+        android:title="Signup"
+        android:orderInCategory="102"
+        app:showAsAction="never"
+        android:id="@+id/signup"/>
+    <item
+        android:title="Logout"
+        android:orderInCategory="103"
+        app:showAsAction="never"
+        android:id="@+id/signout"/>
+
+</menu>
