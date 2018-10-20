@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/batch_entry_layout"
+    android:layout_height="match_parent">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="65dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/suface_view"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="45dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:id="@+id/imei_text_written"
+                android:textSize="10dp"/>
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_weight="1"
+                    android:id="@+id/add_imei_text_written"
+                    android:src="@drawable/add"
+                    android:layout_marginTop="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="25dp" />
+             </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/scanned_batch_recycler_view"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="invisible"
+        android:id="@+id/nothing_batch_selected_imei_image"
+        android:src="@drawable/nothing_found_in_selected_imei"/>
+    </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@color/color_white"
+        android:layout_height="55dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/confirm_batch_selection"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/right_arrow_login_screen"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_back_search"
+            android:id="@+id/back_batch_entry"
+            />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>

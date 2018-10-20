@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:elevation="10dp"
+                    android:minHeight="?attr/actionBarSize"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark" ></android.support.v7.widget.Toolbar>
+                <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:id="@+id/recycler_offers"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/view_combo_offers_layout">
+            </include>
+        </RelativeLayout>
+        <include layout="@layout/drawer"
+            android:fitsSystemWindows="false" />
+    </android.support.v4.widget.DrawerLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/edit_discount_offer_layout">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/edit_combo_offer_layout">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/edit_super_value_offer">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/edit_bank_offer_layout">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/edit_paytm_offer_layout">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/copy_offer_layout_offer_activity">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/offer_copied_to_products_list_layout">
+        </include>
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/turn_onncopy_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_copy_mode_onn"
+        android:layout_margin="16dp" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/turn_off_copy_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_copy_mode_off"
+        android:layout_margin="16dp" />
+</RelativeLayout>

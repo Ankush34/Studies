@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="10dp"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" >
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:elevation="20dp"
+        android:background="#D3D3D3"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/dashboard"
+                    android:layout_height="25dp"
+                    android:src="@drawable/dashboard_panel_business"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Dashboard"
+                    android:textSize="10dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_gravity="center"
+                    android:layout_height="25dp"
+                    android:id="@+id/party"
+                    android:src="@drawable/ledger_icon_inventory_pager"
+                    android:layout_marginTop="12dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Party"
+                    android:textSize="10dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/item"
+                    android:layout_height="25dp"
+                    android:src="@drawable/item_icon_inventory_pager"
+                    android:layout_marginTop="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Item"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/reports"
+                    android:layout_height="25dp"
+                    android:src="@drawable/generate_buziness_reports"
+                    android:layout_marginTop="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Reports"
+                    android:textSize="10dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:id="@+id/dynamically_load_fragment">
+    </RelativeLayout>
+</RelativeLayout>

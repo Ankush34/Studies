@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="invisible"
+            android:id="@+id/access_selected"
+            android:src="@drawable/tick"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="invisible"
+            android:id="@+id/access_rejected"
+            android:src="@drawable/tick1"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/access_name"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:text="Admin"
+        android:textSize="10dp"
+        android:layout_marginLeft="20dp"/>
+</LinearLayout>

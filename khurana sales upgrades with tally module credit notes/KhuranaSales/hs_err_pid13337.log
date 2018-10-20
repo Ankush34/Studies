@@ -1,0 +1,98 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000000e45c3158, pid=13337, tid=0x00007f4e0063a700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b03) (build 1.8.0_152-release-1136-b03)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  0x00000000e45c3158
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f4e21338000):  JavaThread "Task worker for ':'" [_thread_in_Java, id=21607, stack(0x00007f4e0053a000,0x00007f4e0063b000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 2 (SEGV_ACCERR), si_addr: 0x00000000e45c3158
+
+Registers:
+RAX=0x00000000e45c3098, RBX=0x00007f4e01b43dd0, RCX=0x00000000e45bf6a8, RDX=0x00000000e45c30d8
+RSP=0x00007f4e00636a38, RBP=0x00000000e45c31b8, RSI=0x000000000073f3bb, RDI=0x00007f4e962fc000
+R8 =0x00000000e45c3158, R9 =0x0000000100883200, R10=0x00000000e45c30d8, R11=0x0000000100883200
+R12=0x0000000000000000, R13=0x00000000e7e777d0, R14=0x00000000e7e87438, R15=0x00007f4e21338000
+RIP=0x00000000e45c3158, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000015
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f4e00636a38)
+0x00007f4e00636a38:   00000000e7e777d0 00000000e45bf6a8
+0x00007f4e00636a48:   e45bf078e7e86ab0 00000000a1bc0f78
+0x00007f4e00636a58:   00000000e45bef68 e4579b68e7e86ab0
+0x00007f4e00636a68:   00000000e7e86b10 00000000e45bf078
+0x00007f4e00636a78:   00000000e7e86ae0 00000000e7e777d0
+0x00007f4e00636a88:   2d6c45b9e45dac98 00000000e45bef68
+0x00007f4e00636a98:   e6ab131882aaed90 00000000a1bc0f78
+0x00007f4e00636aa8:   00000000e690e560 00000000e45bf0a8
+0x00007f4e00636ab8:   00007f4e825dc6e4 00000000e7e777d0
+0x00007f4e00636ac8:   00007f4e827c114c 00000000e4516858
+0x00007f4e00636ad8:   00007f4e827c114c 0000000100881938
+0x00007f4e00636ae8:   00000000e4579f98 0000000000000001
+0x00007f4e00636af8:   00000000e45162c0 00000000e45162c0
+0x00007f4e00636b08:   00000000e6a33270 00000000e7e777d0
+0x00007f4e00636b18:   00007f4e838de5e4 00000000e44b8210
+0x00007f4e00636b28:   a1bc0f7800000001 00000000e7e777d0
+0x00007f4e00636b38:   00007f4e827b07ac 00000000e44c1478
+0x00007f4e00636b48:   00007f4e83a198a4 00000000e45c3210
+0x00007f4e00636b58:   00007f4e81a7150c 00000001e6aff288
+0x00007f4e00636b68:   00000000e7e777d0 00000000e45dac98
+0x00007f4e00636b78:   00000000e6aff288 00000000e45c3210
+0x00007f4e00636b88:   00000000e45162c0 00000000e7e777d0
+0x00007f4e00636b98:   00007f4e83c89524 00000000e45162c0
+0x00007f4e00636ba8:   00007f4e827d7eec 00000000e7e777d0
+0x00007f4e00636bb8:   00007f4e85f26b74 00000000e45162c0
+0x00007f4e00636bc8:   00007f4e82c40350 00000000e45162c0
+0x00007f4e00636bd8:   00007f4e825dc6e4 0000000100881938
+0x00007f4e00636be8:   e45162c0e690deb0 00000000e45162c0
+0x00007f4e00636bf8:   00007f4e83b1f718 00000000e4516670
+0x00007f4e00636c08:   00000000e62b0200 00000000e690de50
+0x00007f4e00636c18:   00000000e4506278 00000000e4506278
+0x00007f4e00636c28:   00000000e690de50 00000000e45162c0 
+
+Instructions: (pc=0x00000000e45c3158)
+0x00000000e45c3138:   10 31 5c e4 00 00 00 00 05 00 00 00 00 00 00 00
+0x00000000e45c3148:   27 03 11 20 d8 30 5c e4 78 0f bc a1 00 00 00 00
+0x00000000e45c3158:   05 00 00 00 00 00 00 00 1c 6a 11 20 46 56 00 00
+0x00000000e45c3168:   00 00 00 00 89 5a 00 00 00 00 00 00 00 00 00 00 
+
+Register to memory mapping:
+
+RAX=0x00000000e45c3098 is an oop
+com.sun.tools.javac.tree.JCTree$JCLiteral 
+ - klass: 'com/sun/tools/javac/tree/JCTree$JCLiteral'
+RBX=0x00007f4e01b43dd0 is pointing into metadata
+RCX=0x00000000e45bf6a8 is an oop
+com.sun.tools.javac.util.List 
+ - klass: 'com/sun/tools/javac/util/List'
+RDX=0x00000000e45c30d8 is an oop
+com.sun.tools.javac.tree.JCTree$JCReturn 
+ - klass: 'com/sun/tools/javac/tree/JCTree$JCReturn'
+RSP=0x00007f4e00636a38 is pointing into the stack for thread: 0x00007f4e21338000
+RBP=0x00000000e45c31b8 is an oop
+com.sun.tools.javac.tree.JCTree$JCMethodDecl 
+ - klass: 'com/sun/tools/javac/tree/JCTree$JCMethodDecl'
+RSI=0x000000000073f3bb is an unknown value
+RDI=0x00007f4e962fc000 is an unknown value
+R8 =0x00000000e45c3158 is an oop
+com.sun.tools.javac.tree.JCTree$JCBlock 
+ - klass: 'com/sun/tools/javac/tree/JCTree$JCBlock'
+R9 =0x0000000100883200 is pointing into metadata
+R10=0x00000000e45c30d8 is an oop
+com.sun.tools.javac.tree.JCTree$JCReturn 
+ - klass: 'com/sun/tools/javac/tree/JCTree$JCReturn'
+R11=0x0000000100883200 is pointing into metadata
+R12=0x0000000000000000 is an unknown value
+R13=0x00000000e7e777d0 is an oop

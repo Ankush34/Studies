@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="450dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="3dp">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"
+            ></RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/product_image"
+            android:src="@drawable/samsung"
+            android:layout_margin="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="220dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:text="Product Name: "
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Samsung Test Mobile"
+                    android:textSize="10dp"
+                    android:id="@+id/product_name"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:text="Product Price: "
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="1000 /- "
+                    android:textSize="10dp"
+                    android:id="@+id/product_price"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:text="Product max discounted price: "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="500 /- "
+                android:textSize="10dp"
+                android:id="@+id/product_discounted_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:text="Products In Stock: "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="2 Units"
+                android:textSize="10dp"
+                android:id="@+id/product_stock_count"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:text="Products Count Sold In A Month: "
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="2 Units"
+                    android:textSize="10dp"
+                    android:id="@+id/products_count_sold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Proceed To Buy "
+            android:id="@+id/proceed_to_buy"
+            android:textColor="@color/color_white"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/shape"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

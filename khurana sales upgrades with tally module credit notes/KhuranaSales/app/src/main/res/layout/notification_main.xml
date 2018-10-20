@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tool_bar"
+        android:title="Khurana Sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+     android:background="@color/colorPrimary"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+    </android.support.v7.widget.Toolbar>
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<ImageView-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_marginRight="70dp"-->
+            <!--android:id="@+id/go_to_cart"-->
+            <!--android:src="@drawable/ic_shopping"-->
+            <!--android:layout_alignParentRight="true"/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:id="@+id/go_to_profile"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:src="@drawable/ic_profile"-->
+            <!--android:layout_alignParentRight="true"/>-->
+    <!--</RelativeLayout>-->
+    <android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:id="@+id/notificaiton_users"
+        android:layout_below="@+id/tool_bar"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        layout="@layout/write_notification_layout"></include>
+</RelativeLayout>

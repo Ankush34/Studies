@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="10dp"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" >
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/not_products_uploaded_image"
+            android:src="@drawable/nothing_found_add_new_product"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/products_uploaded_recycler"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#C000"
+        android:visibility="invisible"
+        android:id="@+id/transparent_background"
+        android:clickable="true"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/product_entry_layout"
+        android:visibility="invisible"
+        android:layout_height="match_parent">
+        <include layout="@layout/add_new_product_to_server_layout">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/batch_entry_layout"
+        android:visibility="invisible"
+        android:layout_height="match_parent">
+        <include layout="@layout/batch_selection_layout_server_product_add">
+        </include>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/view_batch_by_location_layout">
+        <include layout="@layout/show_batch_layout_new_product_activity"></include>
+    </RelativeLayout>
+</RelativeLayout>

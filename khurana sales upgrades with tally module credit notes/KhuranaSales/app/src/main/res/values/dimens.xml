@@ -1,0 +1,23 @@
+<resources>
+    <array name="letter_tile_colors">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="si_default_text_size">18sp</dimen>
+    <dimen name="si_default_radius_max">24dp</dimen>
+    <dimen name="si_default_radius_min">8dp</dimen>
+    <dimen name="cardMarginHorizontal">10dp</dimen>
+    <dimen name="cardMarginVertical">8dp</dimen>
+
+    <dimen name="materialviewpager_logoHeight">35dp</dimen>
+</resources>
